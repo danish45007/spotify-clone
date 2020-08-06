@@ -16,6 +16,19 @@ const scopes = [
     "user-modify-playback-state",
   ];
 
+// pulling the access token from the url response
+export const getTokenFromUrl = () => {
+    return window.location.hash
+      .substring(1)
+      .split("&")
+      .reduce((initial, item) => {
+        var parts = item.split("=");
+        initial[parts[0]] = decodeURIComponent(parts[1]);
+  
+        return initial;
+      }, {});
+  };
+
 //   composing login url
 export const loginURL = `${authEndPoint}?client_id=${clientID}&redirect_uri=${redirectURI}&scope=${scopes.join(
     "%20"
