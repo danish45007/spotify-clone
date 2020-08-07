@@ -4,7 +4,7 @@ import "./Body.css";
 function Body() {
     return (
         <div className="body">
-            This is body   
+               
         </div>
     )
 }

@@ -7,3 +7,16 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.sidebar__logo{
+    object-fit: contain;
+    height: 70px;
+    padding: 10px;
+    margin-right: auto;
+}
+
+
+.sidebar__title {
+    margin-left: 10px;
+    margin-right: 10px;
+}
