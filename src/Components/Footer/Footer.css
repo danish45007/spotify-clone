@@ -5,4 +5,24 @@
     width: 97%;
     background-color: #282828;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__left {
+    flex: 0.3
+}
+
+.footer__center {
+    flex: 0.4;
+    padding: 0px 100px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 300px;
+}
+
+.footer__right {
+    flex: 0.3;
 }

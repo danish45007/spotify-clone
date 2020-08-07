@@ -42,10 +42,20 @@ function App() {
       }).catch((error) => {
         console.log(error)
       })
+      
+      // getting the user playlist from the spotify-API
+      spotify.getUserPlaylists().then((playlists) => {
+        // poping into the data layer
+        dispatch({
+          type:"SET_PLAYLISTS",
+          playlists:playlists
+        })
+      }).catch((error) => {
+        console.log(error)
+      })
     }
-    console.log("🚩",_token)
-  },[token,dispatch])
-  console.log("😿",user)
+  },[])
+
   return (
     <div>
       {

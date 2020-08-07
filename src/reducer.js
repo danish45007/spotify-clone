@@ -1,8 +1,8 @@
 // inital state of app
 export const initalState = {
     user: null,
-    token:"BQB_H2RpKkB6ZSGGsJjtaHI09NKIHktcAAQpMnqGgCOS28E94y33BaeCfUVd9kUg9Jf1qwSMlnYcyPGX1X_To0-Pod8z9iyk2nGAqYighWg32nby_IN0Lp3C4YqjLMPTBF9Sj6VqnekF-pc-pQATy3p8ItQBFQM28x-iqla10zJIm-6A",
-    playlist: [],
+    token:"BQCjGytcRNp_REIHSzhMKawCWG84h9OUCsp-RlCeGWFJ36JwxM…krslFfwT1uDiy2LaATjgur0Rmn93_DIx5NG3TogFDWwSGvW1p",
+    playlists: [],
     playing: false,
     item: null
 }
@@ -22,6 +22,11 @@ const reducer = (state,action) => {
             return{
                 ...state,
                 token: action.token
+            }
+        case "SET_PLAYLISTS":
+            return{
+                ...state,
+                playlists: action.playlists
             }
         // the defualt case when no action type is set
         // return the exact state 
