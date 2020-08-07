@@ -18,13 +18,19 @@ const scopes = [
 
 // pulling the access token from the url response
 export const getTokenFromUrl = () => {
+    // getting the value after #
     return window.location.hash
+    // keeping the data after the index 1
       .substring(1)
+    //   spliting the data at &
       .split("&")
+    //   reducing the array/strig of data into singular data
       .reduce((initial, item) => {
+        //   spliting the data after =
         var parts = item.split("=");
+        // decoding the encoded URI that means %2 ==> _
         initial[parts[0]] = decodeURIComponent(parts[1]);
-  
+        // finally returning the singular processed data
         return initial;
       }, {});
   };

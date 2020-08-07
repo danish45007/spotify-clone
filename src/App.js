@@ -29,7 +29,7 @@ function App() {
       // poping token data into the data-layer
       dispatch({
         type: "SET_TOKEN",
-        token:token
+        token:_token
       })
       // setting access_token to spotify client object
       spotify.setAccessToken(_token)
@@ -44,13 +44,13 @@ function App() {
       })
     }
     console.log("🚩",_token)
-  },[])
+  },[token,dispatch])
   console.log("😿",user)
   return (
     <div>
       {
         token ? (
-          <Player />
+          <Player spotify={spotify} />
         )
         : (
           <Login />
