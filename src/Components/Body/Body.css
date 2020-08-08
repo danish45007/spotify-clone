@@ -4,6 +4,7 @@
     height: 100vh;
     color: white;
     padding: 30px;
+    overflow-y: overlay;
 }
 
 .body__info {
@@ -50,3 +51,34 @@
 .new {
     display: flex;
 }
+
+.body__song {
+    z-index: 1;
+    margin: 20px -30px;
+}
+
+.body__icon {
+    display: flex;
+    align-items: center;
+}
+
+.body__icon > .MuiSvgIcon-root {
+    margin-right: 20px;
+}
+
+.body__shuffle {
+    font-size: 80px !important;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #1DB954;
+}
+
+.body__shuffle:hover {
+    transition: transform ease-in;
+    transform: scale(1.08);
+}
+
+.main::-webkit-scrollbar {
+    display: none;
+}  

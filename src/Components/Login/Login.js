@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Login.css";
 import { loginURL } from '../../spotify';
-// import {ReactComponent as Img} from '../../Assets/spotify_main.jpg';
+// import {ReactComponent as Img} from '../../Assets/';
 
 function Login() {
     return (
