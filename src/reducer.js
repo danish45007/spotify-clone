@@ -1,10 +1,11 @@
 // inital state of app
 export const initalState = {
     user: null,
-    token:"BQCjGytcRNp_REIHSzhMKawCWG84h9OUCsp-RlCeGWFJ36JwxM…krslFfwT1uDiy2LaATjgur0Rmn93_DIx5NG3TogFDWwSGvW1p",
+    // token:"BQDK2v0HQ2y3QZgsJX-e2kP49B1bpS0Z4AlJWCeYNcv7eEkX0i…mW3ANeLKaH-eDPq1sjN_cT996b5ZQl53TcIHTQfG9Pw8PJTAO",
     playlists: [],
     playing: false,
-    item: null
+    item: null,
+    discover_weekly: null
 }
 
 const reducer = (state,action) => {
@@ -29,7 +30,12 @@ const reducer = (state,action) => {
                 playlists: action.playlists
             }
         // the defualt case when no action type is set
-        // return the exact state 
+        // return the exact state
+        case "SET_DISCOVER_WEEKLY":
+            return{
+                ...state,
+                discover_weekly:action.discover_weekly
+            } 
         default:
             return state 
     }

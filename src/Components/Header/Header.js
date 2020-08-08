@@ -3,7 +3,11 @@ import "./Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import { Input } from '@material-ui/core';
 import { Avatar } from "@material-ui/core";
+import { useDataLayerValue } from '../../DataLayer';
+
 function Header() {
+    // pulling data from the data layer
+    const [{user},dispatch] = useDataLayerValue();
     return (
         <div className="header">
             <div className="header__left">
@@ -14,8 +18,8 @@ function Header() {
             </div>
 
             <div className="header__right">
-                <Avatar src="" alt="" />
-                <h4>Danish</h4>
+                <Avatar src={user?.images[0]?.url} alt={user?.display_name} />
+                <h4>{user?.display_name}</h4>
             </div>
             
         </div>

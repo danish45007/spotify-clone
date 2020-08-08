@@ -53,6 +53,17 @@ function App() {
       }).catch((error) => {
         console.log(error)
       })
+
+      // getting the daily playlist
+      spotify.getPlaylist("0GB9chRwz1EI9MkT3BjfbO").then((response) => {
+        // poping weekly discover data into the data layer
+        dispatch({
+          type:"SET_DISCOVER_WEEKLY",
+          discover_weekly:response
+        })
+      }).catch((error) => {
+        console.log(error)
+      })
     }
   },[])
 
