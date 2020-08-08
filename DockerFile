@@ -1,0 +1,11 @@
+FROM node:alpine
+# creating a folder
+WORKDIR '/app'
+# copy package.json into the root folder app
+COPY package.json .
+# install all the required packages from the package.json
+RUN npm install
+# copy all the content in the docker file
+COPY . .
+# run app
+CMD ["npm","start"]
