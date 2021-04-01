@@ -11,7 +11,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-loader-spinner": "^3.1.14",
-    "react-scripts": "3.4.1",
+    "react-scripts": "4.0.3",
     "spotify-web-api-js": "^1.5.0"
   },
   "scripts": {
